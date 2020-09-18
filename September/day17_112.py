@@ -20,8 +20,22 @@ class TreeNode:
 
 
 def func(root: TreeNode, sum):
+    """
+    这也算是一个有用的函数了，可以改写成统计根节点到每个子节点的和。
+    :param root:
+    :param sum:
+    :return:
+    """
     if not root:
         return False
-    if not root.left and root.right:
+    if not root.left and not root.right:
         return root.val == sum
     return func(root.left, sum -root.left) or func(root.right, sum-root.right)
+
+
+def sunc(root):
+    if not root:
+        return 0
+    if not root.left and not root.right:
+        return root.val
+
