@@ -7,6 +7,9 @@
 
 这里一个就是～～～二叉树我们可以使用root.left , root.right来递归每个root的子节点，
 N叉树如何遍历呢， ！！ 写一个循环就好了， 列表表达式。
+
+有用的代码块
+[self.maxDepth(root) for root in root.children]
 """
 
 
