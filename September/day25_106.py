@@ -29,5 +29,15 @@ class TreeNode:
         self.right = None
         self.left = None
 
+class Solution:
+    def buildTree(self, inorder, post):
+        if not post:
+            return
+        root = TreeNode(post[-1])
+        num = inorder.index(post[-1])
+        root.left = self.buildTree(inorder[:num], post[:num])
+        root.right = self.buildTree(inorder[num+1:], post[num:-1])
+        return root
+
 
 
